@@ -1,0 +1,4 @@
+# Hace que Apache le pase a PHP la cabecera Authorization (necesaria para el login por token)
+<IfModule mod_setenvif.c>
+    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+</IfModule>
